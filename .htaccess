@@ -1,0 +1,5 @@
+# Хостинг reg.ru: всё на https://b-u-r-o.com (без www)
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$ [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule .* https://b-u-r-o.com%{REQUEST_URI} [R=301,L]
