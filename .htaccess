@@ -3,3 +3,10 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} !^443$ [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule .* https://b-u-r-o.com%{REQUEST_URI} [R=301,L]
+
+# Браузер перепроверяет страницу, стили и скрипт при каждом заходе, чтобы обновления сайта были видны сразу
+<IfModule mod_headers.c>
+<FilesMatch "\.(html|css|js)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+</IfModule>

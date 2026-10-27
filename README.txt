@@ -17,7 +17,11 @@ site.js — вывод контактов.
 Размещение:
 Сайт размещён на хостинге reg.ru (Хост-0), папка www/b-u-r-o.com.
 Загрузите туда index.html, style.css, site.js и .htaccess.
-index.html должен быть входной страницей. DNS домена обслуживает Cloudflare
+index.html должен быть входной страницей.
+Хостинг отдаёт css и js с кэшем на 45 дней, поэтому при каждом изменении
+style.css или site.js меняйте номер версии в index.html
+(style.css?v=ГГГГММДД, site.js?v=ГГГГММДД), иначе посетители увидят старые файлы.
+DNS домена обслуживает Cloudflare
 (режим DNS only): A b-u-r-o.com → IP хостинга, CNAME www → b-u-r-o.com.
 
 Поведение:
