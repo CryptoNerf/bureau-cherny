@@ -3,11 +3,27 @@ html{font-family:"Times New Roman",Times,serif;background:#fff;color:#000;font-s
 body{margin:0;width:100%;height:100vh;height:100svh;overflow:hidden;background:#fff}
 main{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;width:100%;height:100%;padding:20px;text-align:center}
 h1{margin:0;font-size:24px;line-height:1.2;font-weight:400;white-space:nowrap}
-.tour{width:min(1000px,100%);height:min(60vh,calc(100vh - 190px));height:min(60svh,calc(100svh - 190px));background:#f2f2f2}
+.tour{width:min(1000px,100%);height:min(60vh,calc(100vh - 210px));height:min(60svh,calc(100svh - 210px));background:#f2f2f2}
 .tour iframe{display:block;width:100%;height:100%;border:0}
 .details{width:100%;font-size:13px;line-height:1.3;font-weight:400}
 p{margin:0}
+a{color:inherit}
+.legal{margin-top:.45em}
 .contacts{display:flex;justify-content:center;flex-wrap:wrap;column-gap:.45em}
 .contacts>span+span::before{content:"•";margin-right:.45em}
 @media(max-width:480px){h1{font-size:22px}main{gap:16px}.details{font-size:12px}.contacts{display:block;margin-top:.65em}.contacts>span{display:block}.contacts>span+span::before{content:none}}
-@media(max-height:500px){main{gap:10px;padding:10px 20px}.tour{height:calc(100vh - 130px);height:calc(100svh - 130px)}}
+@media(max-height:500px){main{gap:10px;padding:10px 20px}.tour{height:calc(100vh - 150px);height:calc(100svh - 150px)}}
+.cookie{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 20px;padding-bottom:calc(10px + env(safe-area-inset-bottom));background:#fff;font-size:12px;line-height:1.35;text-align:center}
+.cookie[hidden]{display:none}
+.cookie button,.doc button{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.cookie button{margin-left:.8em}
+html.doc{overflow:auto}
+.doc body{height:auto;overflow:visible}
+.doc main{display:block;height:auto;max-width:680px;margin:0 auto;padding:40px 20px 60px;text-align:left}
+.doc h1{white-space:normal;margin-bottom:.2em}
+.doc h2{font-size:16px;font-weight:400;margin:1.6em 0 .5em}
+.doc p,.doc li{font-size:14px;line-height:1.45}
+.doc p+p{margin-top:.6em}
+.doc ul{margin:.4em 0;padding-left:1.2em}
+.doc .back{font-size:13px;margin-bottom:2em}
+.doc .fill{background:#fff3b0}
